@@ -83,8 +83,8 @@ USE_XML_AUDIO_POLICY_CONF := 1
 PRODUCT_COPY_FILES += \
       $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
-# Bluetooth: TBD
-#BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
