@@ -55,7 +55,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	ims-ext-common
 
-# Input: TBD
+# Input
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
+	$(LOCAL_PATH)/keylayout/gf_input.kl:system/usr/keylayout/gf_input.kl \
+	$(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 
 # Lights
 PRODUCT_PACKAGES += \
