@@ -61,7 +61,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.oneplus_sm8150
 
-# Media: TBD
+# Media
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
 
 # Net
 PRODUCT_PACKAGES += \
