@@ -111,7 +111,9 @@ TARGET_RIL_VARIANT := caf
 
 # Sepolicy: TBD
 
-# Recovery: TBD
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Treble
 BOARD_VNDK_VERSION := current
