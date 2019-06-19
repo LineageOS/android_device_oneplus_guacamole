@@ -119,3 +119,24 @@ PRODUCT_PACKAGES += \
 	vndk_package
 
 # Wifi Display: TBD
+
+AB_OTA_PARTITIONS += \
+	boot \
+	dtbo \
+	system \
+	vendor \
+	vbmeta
+
+AB_OTA_POSTINSTALL_CONFIG += \
+	RUN_POSTINSTALL_system=true \
+	POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+	FILESYSTEM_TYPE_system=ext4 \
+	POSTINSTALL_OPTIONAL_system=true
+
+PRODUCT_PACKAGES += \
+	otapreopt_script \
+	brillo_update_payload \
+	update_engine \
+	update_engine_sideload \
+	update_verifier
+
