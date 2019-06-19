@@ -17,7 +17,7 @@
 
 set -e
 
-DEVICE=guacamoleb
+DEVICE=guacamole
 VENDOR=oneplus
 INITIAL_COPYRIGHT_YEAR=2019
 
@@ -38,7 +38,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true
 
 # Copyright headers and guards
-write_headers "guacamoleb"
+write_headers "guacamole"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true

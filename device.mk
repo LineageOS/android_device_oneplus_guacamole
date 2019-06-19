@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/oneplus/guacamoleb/guacamoleb-vendor.mk)
+$(call inherit-product-if-exists, vendor/oneplus/guacamole/guacamole-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

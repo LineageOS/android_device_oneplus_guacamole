@@ -5,7 +5,7 @@
 #
 
 BOARD_VENDOR := oneplus
-DEVICE_PATH := device/oneplus/guacamoleb
+DEVICE_PATH := device/oneplus/guacamole
 
 # Architecture
 TARGET_ARCH := arm64
