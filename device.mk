@@ -122,6 +122,8 @@ PRODUCT_PACKAGES += \
 
 # Wifi Display: TBD
 
+AB_OTA_UPDATER := true
+
 AB_OTA_PARTITIONS += \
 	boot \
 	dtbo \
@@ -144,7 +146,7 @@ PRODUCT_PACKAGES += \
 
 # Boot control
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-	bootctrl.sm8150 \
+	bootctrl.msmnile \
 	libcutils \
 	libgptutils \
 	libz \
