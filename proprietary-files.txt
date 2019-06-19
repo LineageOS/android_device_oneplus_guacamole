@@ -149,3 +149,7 @@ lib64/libsdm-disp-apis.so
 # Display postprocessing
 lib64/vendor.display.color@1.0.so
 
+# Fingerprint extensions
+-framework/vendor.oneplus.fingerprint.extension-V1.0-java.jar
+lib64/vendor.oneplus.fingerprint.extension@1.0.so
+lib/vendor.oneplus.fingerprint.extension@1.0.so
