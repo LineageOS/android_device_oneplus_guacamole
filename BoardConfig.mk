@@ -73,6 +73,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
+# AVB
+BOARD_AVB_ENABLE := true
+
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
