@@ -123,6 +123,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 # Treble
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_SHIPPING_API_LEVEL := 28
 
 # System.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
