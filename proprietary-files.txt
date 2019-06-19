@@ -134,3 +134,18 @@ framework/qcnvitems.jar
 framework/qti-telephony-common.jar
 framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+
+# Perf
+lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.iop@2.0.so
+lib64/vendor.qti.hardware.perf@1.0.so
+lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.iop@2.0.so
+lib/vendor.qti.hardware.perf@1.0.so
+
+# SDM
+lib64/libsdm-disp-apis.so
+
+# Display postprocessing
+lib64/vendor.display.color@1.0.so
+
