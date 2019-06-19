@@ -142,3 +142,10 @@ PRODUCT_PACKAGES += \
 	update_engine_sideload \
 	update_verifier
 
+# Boot control
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+	bootctrl.sm8150 \
+	libcutils \
+	libgptutils \
+	libz \
+
