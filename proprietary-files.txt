@@ -31,7 +31,7 @@ lib64/vendor.qti.hardware.data.latency@1.0.so
 -priv-app/CNEService/CNEService.apk
 
 # DASH
--sbin/dashd;rootfs
+-sbin/dashd;rootfs|944b0e03ddc28185e313b1bc838f5305a0d27260
 
 # DPM
 bin/dpmd
