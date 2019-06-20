@@ -1,0 +1,6 @@
+hidl_package_root {
+    name: "vendor",
+    path: "device/oneplus/guacamole/interfaces/vendor",
+}
+
+subdirs = [ "vendor" ]

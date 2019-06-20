@@ -5,6 +5,10 @@ ro.build.characteristics=nosdcard
 ro.setupwizard.mode=OPTIONAL
 ro.control_privapp_permissions=log
 
+# Fingerprint
+persist.vendor.sys.fp.fod.location.X_Y=595,2527
+persist.vendor.sys.fp.fod.size.width_height=250,250
+
 #
 # system.prop for sdm845
 #

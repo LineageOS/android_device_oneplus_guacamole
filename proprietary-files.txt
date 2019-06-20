@@ -151,6 +151,9 @@ lib64/libsdm-disp-apis.so
 lib64/vendor.display.color@1.0.so
 
 # Fingerprint extensions
--framework/vendor.oneplus.fingerprint.extension-V1.0-java.jar
 lib64/vendor.oneplus.fingerprint.extension@1.0.so
 lib/vendor.oneplus.fingerprint.extension@1.0.so
+
+# Display extensions (mostly for under-screen fingerprint scanner)
+lib64/vendor.oneplus.hardware.display@1.0.so
+lib/vendor.oneplus.hardware.display@1.0.so
