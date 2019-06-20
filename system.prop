@@ -9,9 +9,6 @@ ro.control_privapp_permissions=log
 persist.vendor.sys.fp.fod.location.X_Y=595,2527
 persist.vendor.sys.fp.fod.size.width_height=250,250
 
-# Motorized Camera
-persist.vendor.camera.motor_bin=/system/bin/camera_motor.guacamole
-
 #
 # system.prop for sdm845
 #
