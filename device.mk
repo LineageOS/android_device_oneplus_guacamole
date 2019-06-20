@@ -35,7 +35,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-	Snap
+	Snap \
+	camera_motor.guacamole \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
