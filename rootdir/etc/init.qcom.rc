@@ -1,3 +1,4 @@
 on init
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
     mount none /system/etc/media_profiles_vendor.xml /vendor/etc/media_profiles_vendor.xml bind
+    mount none /system/etc/fstab.qcom /vendor/etc/fstab.qcom bind

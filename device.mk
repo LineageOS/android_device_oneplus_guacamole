@@ -20,6 +20,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
 	fs_config_files
 
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/etc/fstab.qcom:system/etc/fstab.qcom
+
 # Audio
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
