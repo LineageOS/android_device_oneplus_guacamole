@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paths to the libraries that contain device specific key handlers -->
+    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
+        <item>/system/priv-app/LineageParts/LineageParts.apk</item>
+        <item>/system/priv-app/KeyHandler/KeyHandler.apk</item>
+    </string-array>
+
+    <!-- Names of the key handler classes -->
+    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
+        <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
+        <item>org.lineageos.settings.device.KeyHandler</item>
+    </string-array>
+</resources>
