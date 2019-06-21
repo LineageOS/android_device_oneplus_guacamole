@@ -9,6 +9,10 @@ ro.control_privapp_permissions=log
 persist.vendor.sys.fp.fod.location.X_Y=595,2603
 persist.vendor.sys.fp.fod.size.width_height=250,250
 
+# VoLTE
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+
 #
 # system.prop for sdm845
 #
