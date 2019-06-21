@@ -13,7 +13,7 @@ class CameraMotor : public ICameraMotor {
 	public:
 		CameraMotor();
 		Return<void> onConnect(int8_t cameraId) override;
-		Return<void> onDisconnect(int8_t cameraVoid) override;
+		Return<void> onDisconnect(int8_t cameraId) override;
 };
 
 }
