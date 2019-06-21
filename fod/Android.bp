@@ -1,0 +1,19 @@
+cc_binary {
+    relative_install_path: "hw",
+    defaults: ["hidl_defaults"],
+    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile",
+    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile.rc"],
+    srcs: ["FingerprintInscreen.cpp"],
+    shared_libs: [
+        "libbase",
+        "libhardware",
+        "libhidlbase",
+        "libhidltransport",
+        "liblog",
+        "libhwbinder",
+        "libutils",
+        "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
+        "vendor.oneplus.fingerprint.extension@1.0",
+        "vendor.oneplus.hardware.display@1.0",
+    ],
+}
