@@ -162,3 +162,8 @@ PRODUCT_PACKAGES += \
 	android.hardware.sensors@1.0-impl \
 	android.hardware.sensors@1.0-service \
 	libsensorndkbridge
+
+# Tri-state keys
+PRODUCT_PACKAGES += \
+	KeyHandler \
+	tri-state-key_daemon
