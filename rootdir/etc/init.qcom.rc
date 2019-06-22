@@ -5,5 +5,5 @@ on init
 
 on boot
     mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
-    setprop vendor.camera.aux.packagelist org.omnirom.snap,com.oneplus.camera,com.google.android.GoogleCamera
+    setprop vendor.camera.aux.packagelist org.codeaurora.snapcam,org.omnirom.snap,com.oneplus.camera,com.google.android.GoogleCamera
 
