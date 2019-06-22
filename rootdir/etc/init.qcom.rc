@@ -4,5 +4,6 @@ on init
     mount none /system/etc/fstab.qcom /vendor/etc/fstab.qcom bind
 
 on boot
+    mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
     setprop vendor.camera.aux.packagelist org.omnirom.snap,com.oneplus.camera,com.google.android.GoogleCamera
 
