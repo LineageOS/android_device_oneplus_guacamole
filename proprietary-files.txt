@@ -157,3 +157,25 @@ lib/vendor.oneplus.fingerprint.extension@1.0.so
 # Display extensions (mostly for under-screen fingerprint scanner)
 lib64/vendor.oneplus.hardware.display@1.0.so
 lib/vendor.oneplus.hardware.display@1.0.so
+
+# SoundFx Hack (TODO: Remove this and move to vendor when we build full vendor image)
+lib/soundfx/libasphere.so|74bd9266e47f5b67aeb5b6632ff30d3781e868a7
+lib/soundfx/libaudiopreprocessing.so|e441af752db04aa61ddf5da4a9508694ff449ea1
+lib/soundfx/libbundlewrapper.so|a0392c359e607ee0763101f080b5e25f4c9247a2
+lib/soundfx/libdirac_gef.so|acc02575841d4a1e1ba75a254cc5efed3e068e4e
+lib/soundfx/libdownmix.so|1b3d54f7dc390f4c8a9b522289c9c3561bca5d93
+lib/soundfx/libdynproc.so|0ba299fecd80df4f521164a6cf382e94f43733f4
+lib/soundfx/libeffectproxy.so|44b37e36d2848e08a74d74883595616b505db39b
+lib/soundfx/libhaptic_effect.so|3ed2309b976d37ab7c9dc49043c0a0223ccceb16
+lib/soundfx/libldnhncr.so|120160059c1a93600cb35ebd5f5c71760f9d215e
+lib/soundfx/libqcbassboost.so|572d03f4566f3e08aeac948b9ef92817af243a39
+lib/soundfx/libqcompostprocbundle.so|bbbcee2cb51f865857c03d2adb5d1c39b83f0548
+lib/soundfx/libqcomvisualizer.so|1b280e982bfe843889129c6023f6cef0b8c1fa00
+lib/soundfx/libqcomvoiceprocessing.so|dc31864bb9883b064a73a1a75505ea58d9fa4b9b
+lib/soundfx/libqcreverb.so|df0d00d039bc92bc295a2ca1e2226d130f1890ee
+lib/soundfx/libqcvirt.so|0e09d7fbf8ead7d0a3696fc14633b4a163bf2b72
+lib/soundfx/libreverbwrapper.so|cb7d6171832d9f1700191797db3c381b786b2ad1
+lib/soundfx/libshoebox.so|94404cb05418a7183986f21b43c4f178586ca272
+lib/soundfx/libswdap.so|6aa69cc8c9ca14a298f0e1955f1cad49cd754fc1
+lib/soundfx/libvisualizer.so|bcfb1a3f30ba9596149f0c879f91570ec12b2c92
+lib/soundfx/libvolumelistener.so|0f145a545d27056802f0f6cd809d22395ca318bc

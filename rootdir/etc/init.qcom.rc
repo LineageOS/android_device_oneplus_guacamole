@@ -5,6 +5,7 @@ on boot
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
     mount none /system/etc/media_profiles_vendor.xml /vendor/etc/media_profiles_vendor.xml bind
     mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
+    mount none /system/lib/soundfx /vendor/lib/soundfx bind
     setprop vendor.camera.aux.packagelist org.codeaurora.snapcam,org.omnirom.snap,com.oneplus.camera,com.google.android.GoogleCamera
 
 service dashd /sbin/dashd
