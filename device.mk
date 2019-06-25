@@ -10,7 +10,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 	$(LOCAL_PATH)/overlay
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/etc/fstab.qcom:system/etc/fstab.qcom
+	$(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.sf.lcd_density=560
 
 # Camera
 PRODUCT_PACKAGES += \

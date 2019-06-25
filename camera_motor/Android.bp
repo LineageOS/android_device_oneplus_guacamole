@@ -4,6 +4,7 @@ cc_binary {
     name: "vendor.lineage.camera.motor@1.0-service.oneplus_msmnile",
     init_rc: ["vendor.lineage.camera.motor@1.0-service.oneplus_msmnile.rc"],
     srcs: ["CameraMotor.cpp"],
+    vendor: true,
     shared_libs: [
         "libbase",
         "libhardware",
