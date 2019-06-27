@@ -13,7 +13,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density=560
+	ro.sf.lcd_density=560 \
+	persist.vendor.sensors.light.location_x=1000 \
+	persist.vendor.sensors.light.location_y=260 \
+	persist.vendor.sensors.light.full_white_reading=200
 
 # Camera
 PRODUCT_PACKAGES += \
