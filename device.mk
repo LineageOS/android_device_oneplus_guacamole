@@ -18,6 +18,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.sensors.light.location_y=260 \
 	persist.vendor.sensors.light.full_white_reading=200
 
+PRODUCT_PACKAGES += \
+	init.display.guacamole.rc
+
 # Camera
 PRODUCT_PACKAGES += \
 	vendor.lineage.camera.motor@1.0 \
