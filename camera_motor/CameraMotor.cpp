@@ -1,12 +1,25 @@
-#define LOG_TAG "vendor.lineage.camera.motor@1.0-service.oneplus_msmnile"
+/*
+ * Copyright (C) 2019 The LineageOS Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#define LOG_TAG "CameraMotorService"
 
 #include "CameraMotor.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <hidl/HidlTransportSupport.h>
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
+#include <fstream>
 
 #define CAMERA_MOTOR_ENABLE "/sys/devices/platform/vendor/vendor:motor_pl/enable"
 #define CAMERA_MOTOR_DIRECTION "/sys/devices/platform/vendor/vendor:motor_pl/direction"
@@ -15,57 +28,56 @@
 #define ENABLED "1"
 #define CAMERA_ID_FRONT 1
 
-using vendor::lineage::camera::motor::V1_0::ICameraMotor;
-using vendor::lineage::camera::motor::V1_0::implementation::CameraMotor;
-using android::hardware::Return;
-using android::hardware::Void;
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
+namespace vendor {
+namespace lineage {
+namespace camera {
+namespace motor {
+namespace V1_0 {
+namespace implementation {
 
-void set_direction(const char *direction) {
-	FILE *fp = fopen(CAMERA_MOTOR_DIRECTION, "w");
-	if (fp != NULL) {
-		fputs(direction, fp);
-	}
-	fclose(fp);
+/*
+ * Write value to path and close file.
+ */
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
 }
 
-void trigger_motor() {
-	FILE *fp = fopen(CAMERA_MOTOR_ENABLE, "w");
-	if (fp != NULL) {
-		fputs(ENABLED, fp);
-	}
-	fclose(fp);
+template <typename T>
+static T get(const std::string& path, const T& def) {
+    std::ifstream file(path);
+    T result;
+
+    file >> result;
+    return file.fail() ? def : result;
 }
 
 Return<void> CameraMotor::onConnect(int8_t cameraId) {
-	if (cameraId != CAMERA_ID_FRONT) return Void();
-	LOG(INFO) << "Popping out front camera";
-	set_direction(DIRECTION_UP);
-	trigger_motor();
-	return Void();
+    if (cameraId == CAMERA_ID_FRONT) {
+        LOG(INFO) << "Popping out front camera";
+
+        set(CAMERA_MOTOR_DIRECTION, DIRECTION_UP);
+        set(CAMERA_MOTOR_ENABLE, ENABLED);
+    }
+
+    return Void();
 }
 
 Return<void> CameraMotor::onDisconnect(int8_t cameraId) {
-	if (cameraId != CAMERA_ID_FRONT) return Void();
-	LOG(INFO) << "Retracting front camera";
-	set_direction(DIRECTION_DOWN);
-	trigger_motor();
-	return Void();
+    if (cameraId == CAMERA_ID_FRONT) {
+        LOG(INFO) << "Retracting front camera";
+
+        set(CAMERA_MOTOR_DIRECTION, DIRECTION_DOWN);
+        set(CAMERA_MOTOR_ENABLE, ENABLED);
+    }
+
+    return Void();
 }
 
-CameraMotor::CameraMotor() {
-}
-
-int main() {
-	android::sp<ICameraMotor> service = new CameraMotor();
-	configureRpcThreadpool(1, true);
-	android::status_t status = service->registerAsService();
-	if (status != android::OK) {
-		LOG(ERROR) << "Cannot register Camera Motor HAL service";
-	}
-	LOG(INFO) << "Camera Motor HAL ready";
-	joinRpcThreadpool();
-	LOG(ERROR) << "Camera Motor service failed to join thread pool";
-	return 1;
-}
+}  // namespace implementation
+}  // namespace V1_0
+}  // namespace motor
+}  // namespace camera
+}  // namespace lineage
+}  // namespace vendor
