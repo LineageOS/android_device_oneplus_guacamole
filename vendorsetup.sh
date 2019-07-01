@@ -1,2 +1,0 @@
-add_lunch_combo lineage_guacamole-eng
-add_lunch_combo lineage_guacamole-userdebug
