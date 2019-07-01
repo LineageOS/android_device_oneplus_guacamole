@@ -25,9 +25,12 @@
 
 #define CAMERA_MOTOR_ENABLE "/sys/devices/platform/vendor/vendor:motor_pl/enable"
 #define CAMERA_MOTOR_DIRECTION "/sys/devices/platform/vendor/vendor:motor_pl/direction"
+#define CAMERA_MOTOR_HALL_CALIBRATION "/sys/bus/platform/devices/vendor:motor_pl/hall_calibration"
 #define CAMERA_MOTOR_POSITION "/sys/devices/platform/vendor/vendor:motor_pl/position"
+#define CAMERA_PERSIST_HALL_CALIBRATION "/mnt/vendor/persist/engineermode/hall_calibration"
 #define DIRECTION_DOWN "0"
 #define DIRECTION_UP "1"
+#define HALL_CALIBRATION_DEFAULT "170,170,480,0,0,480,500,0,0,500,1500"
 #define POSITION_DOWN "1"
 #define POSITION_UP "0"
 #define ENABLED "1"
@@ -78,6 +81,12 @@ static void waitUntilFileChange(const std::string& path, const std::string &val,
             return;
         }
     }
+}
+
+CameraMotor::CameraMotor() {
+    // Load motor hall calibration data
+    set(CAMERA_MOTOR_HALL_CALIBRATION,
+            get<std::string>(CAMERA_PERSIST_HALL_CALIBRATION, HALL_CALIBRATION_DEFAULT));
 }
 
 Return<void> CameraMotor::onConnect(int8_t cameraId) {

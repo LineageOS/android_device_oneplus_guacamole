@@ -30,7 +30,7 @@ using ::android::hardware::Void;
 
 class CameraMotor : public ICameraMotor {
   public:
-    CameraMotor() = default;
+    CameraMotor();
 
     Return<void> onConnect(int8_t cameraId) override;
     Return<void> onDisconnect(int8_t cameraId) override;
