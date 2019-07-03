@@ -16,8 +16,11 @@
 
 package org.lineageos.camerahelper;
 
+import android.os.FileUtils;
 import android.text.TextUtils;
 import android.util.Log;
+
+import java.io.IOException;
 
 public class CameraMotorController {
     private static final String TAG = "CameraMotorController";
@@ -40,10 +43,18 @@ public class CameraMotorController {
       */
     public static void ensureCameraClosed() {
         if (DEBUG) Log.d(TAG, "Writing camera direction down");
-        // Write the direction
-        FileUtils.writeLine(CAMERA_MOTOR_DIRECTION_PATH, DIRECTION_DOWN);
+        try {
+            // Write the direction
+            FileUtils.stringToFile(CAMERA_MOTOR_DIRECTION_PATH, DIRECTION_DOWN);
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to write to " + CAMERA_MOTOR_DIRECTION_PATH, e);
+        }
         if (DEBUG) Log.d(TAG, "Writing camera enabled");
-        // Run the camera
-        FileUtils.writeLine(CAMERA_MOTOR_ENABLE_PATH, ENABLED);
+        try {
+            // Run the camera
+            FileUtils.stringToFile(CAMERA_MOTOR_ENABLE_PATH, ENABLED);
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to write to " + CAMERA_MOTOR_ENABLE_PATH, e);
+        }
     }
 }
