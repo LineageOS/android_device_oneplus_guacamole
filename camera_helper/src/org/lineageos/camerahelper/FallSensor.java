@@ -18,6 +18,7 @@ package org.lineageos.camerahelper;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -79,11 +80,19 @@ public class FallSensor implements SensorEventListener {
             AlertDialog alertDialog = new AlertDialog.Builder(mContext)
                     .setTitle(res.getString(R.string.free_fall_detected_title))
                     .setMessage(res.getString(R.string.free_fall_detected_message))
-                    .setPositiveButton(res.getString(R.string.free_fall_detected_button),
+                    .setNegativeButton(res.getString(R.string.free_fall_detected_reopen),
                             (dialog, which) -> {
                         // Reopen the camera
                         CameraMotorController.setMotorDirection(CameraMotorController.DIRECTION_UP);
                         CameraMotorController.setMotorEnabled();
+                    })
+                    .setPositiveButton(res.getString(R.string.free_fall_detected_close),
+                            (dialog, which) -> {
+                        // Go back to home screen
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        mContext.startActivity(intent);
                     })
                     .create();
             alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
