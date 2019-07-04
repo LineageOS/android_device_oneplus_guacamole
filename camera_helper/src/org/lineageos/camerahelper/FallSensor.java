@@ -16,13 +16,18 @@
 
 package org.lineageos.camerahelper;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.WindowManager;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -53,11 +58,38 @@ public class FallSensor implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (event.values[0] > 0) {
-            Log.d(TAG, "Fall detected, ensuring front camera is closed");
-            // Close the camera
-            CameraMotorController.ensureCameraClosed();
+        if (event.values[0] <= 0) {
+            return;
         }
+
+        Log.d(TAG, "Fall detected, ensuring front camera is closed");
+
+        // We shouldn't really bother doing anything if motor is already closed
+        if (CameraMotorController.getMotorPosition().equals(CameraMotorController.POSITION_DOWN)) {
+            return;
+        }
+
+        // Close the camera
+        CameraMotorController.setMotorDirection(CameraMotorController.DIRECTION_DOWN);
+        CameraMotorController.setMotorEnabled();
+
+        // Show alert dialog informing user that we closed the camera
+        new Handler(Looper.getMainLooper()).post(() -> {
+            Resources res = mContext.getResources();
+            AlertDialog alertDialog = new AlertDialog.Builder(mContext)
+                    .setTitle(res.getString(R.string.free_fall_detected_title))
+                    .setMessage(res.getString(R.string.free_fall_detected_message))
+                    .setPositiveButton(res.getString(R.string.free_fall_detected_button),
+                            (dialog, which) -> {
+                        // Reopen the camera
+                        CameraMotorController.setMotorDirection(CameraMotorController.DIRECTION_UP);
+                        CameraMotorController.setMotorEnabled();
+                    })
+                    .create();
+            alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.show();
+        });
     }
 
     @Override
