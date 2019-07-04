@@ -15,8 +15,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560 \
     persist.vendor.sensors.light.location_x=1000 \
-    persist.vendor.sensors.light.location_y=260 \
-    persist.vendor.sensors.light.full_white_reading=200
+    persist.vendor.sensors.light.location_y=260
 
 PRODUCT_PACKAGES += \
     init.display.guacamole.rc
