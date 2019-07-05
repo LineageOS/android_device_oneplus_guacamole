@@ -55,6 +55,16 @@ public class KeyHandler implements DeviceKeyHandler {
                     showCameraMotorPressWarning();
                 }
                 break;
+            case MOTOR_EVENT_UP_ABNORMAL:
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    showCameraMotorCannotGoUpWarning();
+                }
+                break;
+            case MOTOR_EVENT_DOWN_ABNORMAL:
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    showCameraMotorCannotGoDownWarning();
+                }
+                break;
             default:
                 return event;
         }
@@ -69,6 +79,62 @@ public class KeyHandler implements DeviceKeyHandler {
             Log.e(TAG, "Failed to create package context", e);
         }
         return null;
+    }
+
+    private void showCameraMotorCannotGoDownWarning() {
+        // Show the alert
+        new Handler(Looper.getMainLooper()).post(() -> {
+            Context packageContext = getPackageContext();
+            if (packageContext != null) {
+                AlertDialog alertDialog = new AlertDialog.Builder(packageContext)
+                        .setTitle(R.string.motor_cannot_go_up_title)
+                        .setMessage(R.string.motor_cannot_go_down_message)
+                        .setPositiveButton(R.string.motor_cannot_go_down_retry, (dialog, which) -> {
+                            // Close the camera
+                            CameraMotorController.setMotorDirection(
+                                    CameraMotorController.DIRECTION_DOWN);
+                            CameraMotorController.setMotorEnabled();
+                        })
+                        .create();
+                alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+                alertDialog.setCanceledOnTouchOutside(false);
+                alertDialog.show();
+            }
+        });
+    }
+
+    private void showCameraMotorCannotGoUpWarning() {
+        // Show the alert
+        new Handler(Looper.getMainLooper()).post(() -> {
+            Context packageContext = getPackageContext();
+            if (packageContext != null) {
+                AlertDialog alertDialog = new AlertDialog.Builder(packageContext)
+                        .setTitle(R.string.motor_cannot_go_up_title)
+                        .setMessage(R.string.motor_cannot_go_up_message)
+                        .setNegativeButton(R.string.motor_cannot_go_up_retry, (dialog, which) -> {
+                            // Reopen the camera
+                            CameraMotorController.setMotorDirection(
+                                    CameraMotorController.DIRECTION_UP);
+                            CameraMotorController.setMotorEnabled();
+                        })
+                        .setPositiveButton(R.string.motor_cannot_go_up_close, (dialog, which) -> {
+                            // Close the camera
+                            CameraMotorController.setMotorDirection(
+                                    CameraMotorController.DIRECTION_DOWN);
+                            CameraMotorController.setMotorEnabled();
+
+                            // Go back to home screen
+                            Intent intent = new Intent(Intent.ACTION_MAIN);
+                            intent.addCategory(Intent.CATEGORY_HOME);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            mContext.startActivity(intent);
+                        })
+                        .create();
+                alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+                alertDialog.setCanceledOnTouchOutside(false);
+                alertDialog.show();
+            }
+        });
     }
 
     private void showCameraMotorPressWarning() {
