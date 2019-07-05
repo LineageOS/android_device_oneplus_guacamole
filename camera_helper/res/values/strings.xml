@@ -19,4 +19,7 @@
     <string name="free_fall_detected_message">Front facing camera has been lowered in order to protect it. Would you like to use front camera again?</string>
     <string name="free_fall_detected_reopen">Raise the camera</string>
     <string name="free_fall_detected_close">Close</string>
+
+    <string name="motor_press_title">Warning</string>
+    <string name="motor_press_message">Pressing down the front facing camera can damage the motor. Please avoid doing so.</string>
 </resources>
