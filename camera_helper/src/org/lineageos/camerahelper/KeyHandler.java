@@ -62,6 +62,15 @@ public class KeyHandler implements DeviceKeyHandler {
         return null;
     }
 
+    private Context getPackageContext() {
+        try {
+            return mContext.createPackageContext("org.lineageos.camerahelper", 0);
+        } catch (NameNotFoundException | SecurityException e) {
+            Log.e(TAG, "Failed to create package context", e);
+        }
+        return null;
+    }
+
     private void showCameraMotorPressWarning() {
         // Go back to home to close all camera apps first
         Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -70,23 +79,18 @@ public class KeyHandler implements DeviceKeyHandler {
         mContext.startActivity(intent);
 
         // Show the alert
-        Context packageContext;
-        try {
-            packageContext = mContext.createPackageContext("org.lineageos.camerahelper", 0);
-        } catch (NameNotFoundException | SecurityException e) {
-            Log.e(TAG, Log.getStackTraceString(e));
-            return;
-        }
-
         new Handler(Looper.getMainLooper()).post(() -> {
-            AlertDialog alertDialog = new AlertDialog.Builder(packageContext)
-                    .setTitle(R.string.motor_press_title)
-                    .setMessage(R.string.motor_press_message)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .create();
-            alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
-            alertDialog.setCanceledOnTouchOutside(false);
-            alertDialog.show();
+            Context packageContext = getPackageContext();
+            if (packageContext != null) {
+                AlertDialog alertDialog = new AlertDialog.Builder(packageContext)
+                        .setTitle(R.string.motor_press_title)
+                        .setMessage(R.string.motor_press_message)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .create();
+                alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+                alertDialog.setCanceledOnTouchOutside(false);
+                alertDialog.show();
+            }
         });
     }
 }
