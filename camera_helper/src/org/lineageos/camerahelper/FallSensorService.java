@@ -17,7 +17,10 @@
 package org.lineageos.camerahelper;
 
 import android.app.Service;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -27,10 +30,29 @@ public class FallSensorService extends Service {
 
     private FallSensor mFallSensor;
 
+    private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals(Intent.ACTION_SCREEN_ON)) {
+                if (DEBUG) Log.d(TAG, "Screen on, enabling fall sensor");
+                mFallSensor.enable();
+            } else if (action.equals(Intent.ACTION_SCREEN_OFF)) {
+                if (DEBUG) Log.d(TAG, "Screen off, disabling fall sensor");
+                mFallSensor.disable();
+            }
+        }
+    };
+
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         mFallSensor = new FallSensor(this);
+
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
+        intentFilter.addAction(Intent.ACTION_SCREEN_ON);
+        registerReceiver(mScreenStateReceiver, intentFilter);
     }
 
     @Override
@@ -44,6 +66,7 @@ public class FallSensorService extends Service {
     public void onDestroy() {
         if (DEBUG) Log.d(TAG, "Destroying service");
         mFallSensor.disable();
+        unregisterReceiver(mScreenStateReceiver);
         super.onDestroy();
     }
 
