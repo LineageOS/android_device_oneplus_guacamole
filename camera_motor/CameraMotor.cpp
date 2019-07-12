@@ -34,7 +34,7 @@
 #define POSITION_DOWN "1"
 #define POSITION_UP "0"
 #define ENABLED "1"
-#define CAMERA_ID_FRONT 1
+#define CAMERA_ID_FRONT "1"
 
 namespace vendor {
 namespace lineage {
@@ -89,7 +89,7 @@ CameraMotor::CameraMotor() {
             get<std::string>(CAMERA_PERSIST_HALL_CALIBRATION, HALL_CALIBRATION_DEFAULT));
 }
 
-Return<void> CameraMotor::onConnect(int8_t cameraId) {
+Return<void> CameraMotor::onConnect(const hidl_string& cameraId) {
     auto motorPosition = get<std::string>(CAMERA_MOTOR_POSITION, "");
 
     if (cameraId == CAMERA_ID_FRONT && motorPosition == POSITION_DOWN) {
@@ -109,7 +109,7 @@ Return<void> CameraMotor::onConnect(int8_t cameraId) {
     return Void();
 }
 
-Return<void> CameraMotor::onDisconnect(int8_t cameraId) {
+Return<void> CameraMotor::onDisconnect(const hidl_string& cameraId) {
     auto motorPosition = get<std::string>(CAMERA_MOTOR_POSITION, "");
 
     if (cameraId == CAMERA_ID_FRONT && motorPosition == POSITION_UP) {
