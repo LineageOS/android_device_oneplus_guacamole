@@ -5,21 +5,20 @@
 #
 $(call inherit-product, device/oneplus/sm8150-common/common.mk)
 
+# Vendor properties
+-include $(LOCAL_PATH)/vendor_props.mk
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
-
-PRODUCT_PACKAGES += \
-    init.display.guacamole.rc
 
 # Camera
 PRODUCT_PACKAGES += \
     vendor.lineage.camera.motor@1.0 \
     vendor.lineage.camera.motor@1.0-service.oneplus_msmnile \
     OnePlusCameraHelper
+
+# Device init scripts
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.display.guacamole.rc
