@@ -78,12 +78,12 @@ public class FallSensor implements SensorEventListener {
             AlertDialog alertDialog = new AlertDialog.Builder(mContext)
                     .setTitle(R.string.free_fall_detected_title)
                     .setMessage(R.string.free_fall_detected_message)
-                    .setNegativeButton(R.string.free_fall_detected_reopen, (dialog, which) -> {
+                    .setNegativeButton(R.string.raise_the_camera, (dialog, which) -> {
                         // Reopen the camera
                         CameraMotorController.setMotorDirection(CameraMotorController.DIRECTION_UP);
                         CameraMotorController.setMotorEnabled();
                     })
-                    .setPositiveButton(R.string.free_fall_detected_close, (dialog, which) -> {
+                    .setPositiveButton(R.string.close, (dialog, which) -> {
                         // Go back to home screen
                         Intent intent = new Intent(Intent.ACTION_MAIN);
                         intent.addCategory(Intent.CATEGORY_HOME);

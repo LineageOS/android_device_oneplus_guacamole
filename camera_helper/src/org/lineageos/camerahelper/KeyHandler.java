@@ -87,9 +87,9 @@ public class KeyHandler implements DeviceKeyHandler {
             Context packageContext = getPackageContext();
             if (packageContext != null) {
                 AlertDialog alertDialog = new AlertDialog.Builder(packageContext)
-                        .setTitle(R.string.motor_cannot_go_up_title)
+                        .setTitle(R.string.warning)
                         .setMessage(R.string.motor_cannot_go_down_message)
-                        .setPositiveButton(R.string.motor_cannot_go_down_retry, (dialog, which) -> {
+                        .setPositiveButton(R.string.retry, (dialog, which) -> {
                             // Close the camera
                             CameraMotorController.setMotorDirection(
                                     CameraMotorController.DIRECTION_DOWN);
@@ -109,15 +109,15 @@ public class KeyHandler implements DeviceKeyHandler {
             Context packageContext = getPackageContext();
             if (packageContext != null) {
                 AlertDialog alertDialog = new AlertDialog.Builder(packageContext)
-                        .setTitle(R.string.motor_cannot_go_up_title)
+                        .setTitle(R.string.warning)
                         .setMessage(R.string.motor_cannot_go_up_message)
-                        .setNegativeButton(R.string.motor_cannot_go_up_retry, (dialog, which) -> {
+                        .setNegativeButton(R.string.retry, (dialog, which) -> {
                             // Reopen the camera
                             CameraMotorController.setMotorDirection(
                                     CameraMotorController.DIRECTION_UP);
                             CameraMotorController.setMotorEnabled();
                         })
-                        .setPositiveButton(R.string.motor_cannot_go_up_close, (dialog, which) -> {
+                        .setPositiveButton(R.string.close, (dialog, which) -> {
                             // Close the camera
                             CameraMotorController.setMotorDirection(
                                     CameraMotorController.DIRECTION_DOWN);
@@ -149,7 +149,7 @@ public class KeyHandler implements DeviceKeyHandler {
             Context packageContext = getPackageContext();
             if (packageContext != null) {
                 AlertDialog alertDialog = new AlertDialog.Builder(packageContext)
-                        .setTitle(R.string.motor_press_title)
+                        .setTitle(R.string.warning)
                         .setMessage(R.string.motor_press_message)
                         .setPositiveButton(android.R.string.ok, null)
                         .create();
