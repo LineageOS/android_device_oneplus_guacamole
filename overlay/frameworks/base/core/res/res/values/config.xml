@@ -235,11 +235,11 @@
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
-         config_dynamicHysteresisLuxLevels. The brightening threshold is calculated as
+         config_ambientThresholdLevels. The brightening threshold is calculated as
          lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
-         the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
+         the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisBrightLevels">
+    <integer-array name="config_ambientBrighteningThresholds">
         <item>200</item>
         <item>200</item>
         <item>200</item>
@@ -261,11 +261,11 @@
 
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
-         config_dynamicHysteresisLuxLevels. The darkening threshold is calculated as
+         config_ambientThresholdLevels. The darkening threshold is calculated as
          lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
-         the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
+         the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisDarkLevels">
+    <integer-array name="config_ambientDarkeningThresholds">
         <item>200</item>
         <item>200</item>
         <item>200</item>
@@ -288,14 +288,15 @@
     <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
          values by calculating the index to use for lookup and then setting the constraint value
          to the corresponding value of the array. The new brightening hysteresis constraint value
-         is the n-th element of config_dynamicHysteresisBrightLevels, and the new darkening
-         hysteresis constraint value is the n-th element of config_dynamicHysteresisDarkLevels.
+         is the n-th element of config_ambientBrighteningThresholds, and the new darkening
+         hysteresis constraint value is the n-th element of config_ambientDarkeningThresholds.
+
          The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
-         condition                      calculated index
-         value < lux[0]                 0
-         lux[n] <= value < lux[n+1]     n+1
-         lux[MAX] <= value              MAX+1 -->
-    <integer-array name="config_dynamicHysteresisLuxLevels">
+         condition                       calculated index
+         value < level[0]                0
+         level[n] <= value < level[n+1]  n+1
+         level[MAX] <= value             MAX+1 -->
+    <integer-array name="config_ambientThresholdLevels">
         <item>1</item>
         <item>4</item>
         <item>12</item>
