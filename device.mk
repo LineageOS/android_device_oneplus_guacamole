@@ -16,7 +16,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Camera
 PRODUCT_PACKAGES += \
     vendor.lineage.camera.motor@1.0 \
-    vendor.lineage.camera.motor@1.0-service.guacamole \
+    vendor.lineage.camera.motor@1.0-service.oneplus_msmnile \
     OnePlusCameraHelper
 
 # Device init scripts
