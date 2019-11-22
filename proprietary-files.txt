@@ -1,0 +1,9 @@
+# Fingerprint
+vendor/lib/hw/goodix.fod.msmnile.so
+vendor/lib/fp_hal_extension.so
+vendor/lib/libgf_ud_hal.so
+vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/hw/goodix.fod.msmnile.so
+vendor/lib64/fp_hal_extension.so
+vendor/lib64/libgf_ud_hal.so
+vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
