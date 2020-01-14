@@ -17,6 +17,11 @@
 -->
 <resources>
     <string name="close">Закрыть</string>
+    <string name="raise_the_camera">Поднять камеру</string>
     <string name="retry">Повторить</string>
     <string name="warning">Предупреждение</string>
+    <string name="free_fall_detected_message">Фронтальная камера была опущена для ее защиты. Хотите снова использовать фронтальную камеру?</string>
+    <string name="motor_cannot_go_down_message">Невозможно убрать фронтальную камеру. Пожалуйста, убедитесь, что нет препятствий</string>
+    <string name="motor_cannot_go_up_message">Невозможно выдвинуть фронтальную камеру. Пожалуйста, убедитесь, что нет препятствий</string>
+    <string name="motor_press_message">Нажатие на фронтальную камеру может привести к повреждению двигателя. Пожалуйста, избегайте этого.</string>
 </resources>

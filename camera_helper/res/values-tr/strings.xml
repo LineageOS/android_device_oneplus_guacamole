@@ -20,6 +20,7 @@
     <string name="raise_the_camera">Kamerayı çıkart</string>
     <string name="retry">Tekrar dene</string>
     <string name="warning">Uyarı</string>
+    <string name="free_fall_detected_title">Serbest düşme tespit edildi</string>
     <string name="free_fall_detected_message">Koruma amaçlı öne bakan kamera indirildi. Ön kamerayı tekrar kullanmak ister misiniz?</string>
     <string name="motor_cannot_go_down_message">Öne bakan kamera geri çekilemez, lütfen bir engel olmadığından emin olun</string>
     <string name="motor_cannot_go_up_message">Öne bakan kamera açılmıyor, lütfen engel olmadığından emin olun</string>
