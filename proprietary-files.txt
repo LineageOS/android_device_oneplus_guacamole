@@ -83,3 +83,5 @@ vendor/etc/sensors/config/sx932x_0.json
 vendor/etc/sensors/config/tcs3701.json
 vendor/etc/sensors/config/tmd3702.json
 vendor/etc/sensors/sns_reg_config
+vendor/lib/sensors.ssc.so
+vendor/lib64/sensors.ssc.so
