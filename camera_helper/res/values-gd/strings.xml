@@ -15,9 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <string name="close">Sluiten</string>
-    <string name="raise_the_camera">Camera omhoog</string>
-    <string name="retry">Opnieuw</string>
-    <string name="warning">Let op</string>
-    <string name="free_fall_detected_title">Vrije val gedetecteerd</string>
+    <string name="close">Dùin</string>
+    <string name="retry">Feuch ris a-rithist</string>
 </resources>
