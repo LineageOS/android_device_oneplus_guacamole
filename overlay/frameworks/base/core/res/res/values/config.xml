@@ -240,23 +240,21 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>250</item>
-        <item>300</item>
-        <item>300</item>
-        <item>300</item>
-        <item>300</item>
-        <item>300</item>
-        <item>300</item>
-        <item>400</item>
-        <item>500</item>
+        <item>9000</item> <!-- 1 -->
+        <item>8000</item> <!-- 4 -->
+        <item>7000</item> <!-- 12 -->
+        <item>5000</item> <!-- 20 -->
+        <item>3500</item> <!-- 40 -->
+        <item>2500</item> <!-- 65 -->
+        <item>2000</item> <!-- 90 -->
+        <item>2000</item>
+        <item>2000</item>
+        <item>2000</item>
+        <item>2000</item>
+        <item>1500</item>
+        <item>1500</item>
+        <item>1000</item>
+        <item>1000</item>
     </integer-array>
 
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
@@ -266,23 +264,21 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientDarkeningThresholds">
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>200</item>
-        <item>300</item>
-        <item>400</item>
-        <item>400</item>
-        <item>400</item>
-        <item>400</item>
-        <item>400</item>
-        <item>400</item>
-        <item>500</item>
-        <item>500</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </integer-array>
 
     <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
@@ -311,7 +307,6 @@
         <item>1300</item>
         <item>2000</item>
         <item>3300</item>
-        <item>6000</item>
     </integer-array>
 
     <!-- Screen brightness used to dim the screen when the user activity
