@@ -14,6 +14,31 @@ vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 vendor/lib/hw/audio.primary.msmnile.so
 vendor/lib64/hw/audio.primary.msmnile.so
 
+# Camera
+vendor/lib/camera/components/com.oneplus.node.bokeh.so
+vendor/lib/camera/components/com.oneplus.node.rtb.so
+vendor/lib/hw/camera.qcom.so
+vendor/lib/hw/com.qti.chi.override.so
+vendor/lib64/camera/com.qti.sensormodule.ofilm_imx481.bin
+vendor/lib64/camera/com.qti.sensormodule.ofilm_imx586.bin
+vendor/lib64/camera/com.qti.sensormodule.ofilm_s5k3m5.bin
+vendor/lib64/camera/com.qti.sensormodule.semco_2nd_lens_imx586.bin
+vendor/lib64/camera/com.qti.sensormodule.semco_imx481.bin
+vendor/lib64/camera/com.qti.sensormodule.semco_imx586.bin
+vendor/lib64/camera/com.qti.sensormodule.semco_s5k3m5.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx471.bin
+vendor/lib64/camera/com.qti.tuned.ofilm_imx481.bin
+vendor/lib64/camera/com.qti.tuned.ofilm_imx586.bin
+vendor/lib64/camera/com.qti.tuned.ofilm_s5k3m5.bin
+vendor/lib64/camera/com.qti.tuned.semco_imx481.bin
+vendor/lib64/camera/com.qti.tuned.semco_imx586.bin
+vendor/lib64/camera/com.qti.tuned.semco_s5k3m5.bin
+vendor/lib64/camera/com.qti.tuned.sunny_imx471.bin
+vendor/lib64/camera/components/com.oneplus.node.bokeh.so
+vendor/lib64/camera/components/com.oneplus.node.rtb.so
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
+
 # Fingerprint
 vendor/lib/hw/goodix.fod.msmnile.so
 vendor/lib/fp_hal_extension.so
