@@ -40,17 +40,24 @@
         <item>4</item>
         <item>12</item>
         <item>20</item>
-        <item>40</item>
-        <item>65</item>
-        <item>95</item>
-        <item>140</item>
-        <item>200</item>
-        <item>350</item>
-        <item>650</item>
-        <item>1300</item>
+        <item>28</item>
+        <item>47</item>
+        <item>63</item>
+        <item>86</item>
+        <item>150</item>
+        <item>160</item>
+        <item>220</item>
+        <item>270</item>
+        <item>360</item>
+        <item>420</item>
+        <item>510</item>
+        <item>620</item>
+        <item>1000</item>
         <item>2000</item>
-        <item>3300</item>
-        <item>6000</item>
+        <item>3100</item>
+        <item>5000</item>
+        <item>8000</item>
+        <item>12000</item>
     </integer-array>
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
@@ -64,22 +71,29 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>2.0487</item>
+         <item>2.0487</item>
         <item>4.8394</item>
         <item>17.2619</item>
         <item>39.2619</item>
         <item>50.671</item>
-        <item>92.3019</item>
-        <item>94.2512</item>
-        <item>98.37</item>
-        <item>100.152</item>
-        <item>105.297</item>
-        <item>120.385</item>
-        <item>142.064</item>
-        <item>226.5179</item>
-        <item>248.0267</item>
-        <item>353.2814</item>
-        <item>427.6287</item>
+        <item>72.95</item>
+        <item>80.46</item>
+        <item>84.38</item>
+        <item>89.51</item>
+        <item>100.34</item>
+        <item>102.21</item>
+        <item>109.48</item>
+        <item>114.19</item>
+        <item>123.86</item>
+        <item>129.18</item>
+        <item>138.07</item>
+        <item>145.62</item>
+        <item>168.84</item>
+        <item>234.9</item>
+        <item>291</item>
+        <item>370</item>
+        <item>492</item>
+        <item>580</item>
     </array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
