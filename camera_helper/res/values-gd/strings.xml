@@ -16,5 +16,12 @@
 -->
 <resources>
     <string name="close">Dùin</string>
+    <string name="raise_the_camera">Tog an camara</string>
     <string name="retry">Feuch ris a-rithist</string>
+    <string name="warning">Rabhadh</string>
+    <string name="free_fall_detected_title">Mhothaich sinn do thuiteam saor</string>
+    <string name="free_fall_detected_message">Chaidh camara a’ bheulaibh ìsleachadh gus a dhìon. A bheil thu airson camara a’ bheulaibh a chleachdadh a-rithist?</string>
+    <string name="motor_cannot_go_down_message">Cha ghabh camara a’ bheulaibh a tharraing a-steach, dèan cinnteach nach eil dad ’ga bhacadh</string>
+    <string name="motor_cannot_go_up_message">Cha ghabh camara a’ bheulaibh a shìneadh a-mach, dèan cinnteach nach eil dad ’ga bhacadh</string>
+    <string name="motor_press_message">Ma nì thu brùthadh air camara a’ bheulaibh, nì sin cron air a’ mhotar. Na dèan seo.</string>
 </resources>
