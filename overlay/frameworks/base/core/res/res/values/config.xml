@@ -343,6 +343,6 @@
     <integer translatable="false" name="config_brightness_ramp_rate_fast">400</integer>
 
     <!-- Radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">223px</dimen>
+    <dimen name="rounded_corner_radius">8dp</dimen>
 
 </resources>
