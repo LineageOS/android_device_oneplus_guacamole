@@ -22,5 +22,8 @@
     <!-- Height of the status bar -->
     <dimen name="status_bar_height_portrait">36.599976dip</dimen>
 
+    <!-- Radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">8dp</dimen>
+
 </resources>
 
