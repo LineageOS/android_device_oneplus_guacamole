@@ -196,6 +196,17 @@
 <!-- wangbuqing,add USB RX default config,20180620,add Start -->
     <ctl name="USB_AUDIO_RX SampleRate" value="KHZ_48" />
 <!-- wangbuqing,add USB RX default config,20180620,add END -->
+<!-- #ifdef VENDOR_EDIT -->
+<!-- dujie@MM.Audio, 2019/09/20, add for ktv loopback -->
+    <ctl name="SLIMBUS_6_RX Port Mixer SLIM_1_TX" value="0" />
+    <ctl name="USB_AUDIO_RX Port Mixer USB_AUDIO_TX" value="0" />
+    <ctl name="USB_DL_HL Switch" value="0" />
+<!-- yewenliang@MM.Audio, 2020/03/10, add for ktv loopback -->
+    <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia6" value="0" />
+    <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia6" value="0" />
+    <ctl name="MultiMedia6 Mixer USB_AUDIO_TX" value="0" />
+    <ctl name="MultiMedia6 Mixer SLIM_1_TX" value="0" />
+<!-- #endif -->
     <ctl name="MultiMedia6 Mixer SLIM_0_TX" value="0" />
     <ctl name="SLIM_2_RX Format" value="UNPACKED" />
     <ctl name="SLIM_2_RX SampleRate" value="KHZ_48" />
@@ -321,6 +332,10 @@
     <!-- Incall Recording -->
     <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="0" />
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record Start-->
+    <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="0" />
+    <ctl name="MultiMedia9 Mixer VOC_REC_DL" value="0" />
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record end-->
     <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="0" />
     <ctl name="MultiMedia17 Mixer VOC_REC_UL" value="0" />
@@ -632,6 +647,8 @@
     <ctl name="QUAT_MI2S_RX Audio Mixer Ultrasound" value="0" />
     <!-- Stereo or mono smart pa controls -->
     <ctl name="TFA_CHIP_SELECTOR" value="0" />
+    <!-- yewenliang@MM.Audio, 2019/11/21, add for close pa -->
+    <ctl name="Tfa Enable" value="1" />
     <ctl name="stereo Profile" value="speaker" />
     <!-- Ultrasound default settings-->
     <ctl name="Ultrasound Event" value="0" />
@@ -715,6 +732,44 @@
     <path name="echo-reference-voip display-port">
         <ctl name="AUDIO_REF_EC_UL10 MUX" value="DISPLAY_PORT" />
     </path>
+
+<!--#ifdef VENDOR_EDIT  -->
+<!-- liuhaituo@MM.Audio, 2020/06/22, support voice assitant used 4ch aec record -->
+    <path name="echo-reference aec-speaker">
+        <ctl name="MultiMedia1 Mixer AFE_LOOPBACK_TX" value="1" />
+
+        <ctl name="AUDIO_REF_EC_UL1 MUX" value="QUAT_MI2S_RX" />
+        <ctl name="EC Reference Channels" value="Two" />
+        <ctl name="EC Reference Bit Format" value="S16_LE" />
+        <ctl name="EC Reference SampleRate" value="16000" />
+
+        <ctl name="AFE_LOOPBACK_TX Channels" value="Two" />
+        <ctl name="MultiMedia1 Channels" value="4" />
+
+        <ctl name="MultiMedia1 Channel Rule" value="5" />
+        <ctl name="MultiMedia1 Output Channel1" id ="0" value="16384" />
+        <ctl name="MultiMedia1 Output Channel1" id ="1" value="0" />
+        <ctl name="MultiMedia1 Output Channel1" id ="2" value="0" />
+        <ctl name="MultiMedia1 Output Channel1" id ="3" value="0" />
+        <ctl name="MultiMedia1 Output Channel2" id ="0" value="0" />
+        <ctl name="MultiMedia1 Output Channel2" id ="1" value="16384" />
+        <ctl name="MultiMedia1 Output Channel2" id ="2" value="0" />
+        <ctl name="MultiMedia1 Output Channel2" id ="3" value="0" />
+        <ctl name="MultiMedia1 Output Channel3" id ="0" value="0" />
+        <ctl name="MultiMedia1 Output Channel3" id ="1" value="0" />
+        <ctl name="MultiMedia1 Output Channel3" id ="2" value="16384" />
+        <ctl name="MultiMedia1 Output Channel3" id ="3" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="0" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="1" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="2" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="3" value="16384" />
+
+        <ctl name="MultiMedia1 Channel Mixer" value="Enable" />
+        <ctl name="MultiMedia1 Channel1" value="SLIM_0_TX" />
+        <ctl name="MultiMedia1 Channel2" value="AFE_LOOPBACK_TX" />
+    </path>
+
+<!-- #endif -->
 
     <path name="deep-buffer-playback">
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia1" value="1" />
@@ -1823,6 +1878,23 @@
     <path name="audio-record pa-fb">
         <ctl name="MultiMedia1 Mixer QUAT_MI2S_TX" value="1" />
     </path>
+
+<!-- yewenliang@MM.Audio, 2020/03/10, add for ktv loopback -->
+    <path name="audio-ktv-loopback-rx headphones">
+        <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia6" value="1" />
+    </path>
+
+    <path name="audio-ktv-loopback-rx usb-headset">
+        <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia6" value="1" />
+    </path>
+
+    <path name="audio-ktv-loopback-tx headset-mic">
+        <ctl name="MultiMedia6 Mixer SLIM_1_TX" value="1" />
+    </path>
+
+    <path name="audio-ktv-loopback-tx usb-headset-mic">
+        <ctl name="MultiMedia6 Mixer USB_AUDIO_TX" value="1" />
+    </path>
 <!-- #endif -->
 
     <path name="audio-record headset-mic">
@@ -1949,9 +2021,11 @@
         <path name="play-fm headphones" />
     </path>
 
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record Start-->
     <path name="incall-rec-uplink">
-        <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="1" />
+        <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="1" />
     </path>
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record end-->
 
     <path name="incall-rec-uplink bt-sco">
         <path name="incall-rec-uplink" />
@@ -1997,9 +2071,11 @@
         <path name="incall-rec-uplink-compress" />
     </path>
 
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record Start-->
     <path name="incall-rec-downlink">
-        <ctl name="MultiMedia1 Mixer VOC_REC_DL"  value="1" />
+        <ctl name="MultiMedia9 Mixer VOC_REC_DL"  value="1" />
     </path>
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record end-->
 
     <path name="incall-rec-downlink bt-sco">
         <path name="incall-rec-downlink" />
@@ -2170,6 +2246,14 @@
         <ctl name="SLIM_0_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer SLIM_0_TX_MMode1" value="1" />
     </path>
+
+<!-- #ifdef VENDOR_EDIT -->
+<!-- zhangrun@MM.Audio,2020/04/21, add for Hearing Aid feature-->
+    <path name="voicemmode1-call hearing-aid">
+        <ctl name="AFE_PCM_RX_Voice Mixer VoiceMMode1" value="1"/>
+        <ctl name="VoiceMMode1_Tx Mixer SLIM_0_TX_MMode1" value="1"/>
+    </path>
+<!--#endif-->
 
 <!-- #ifdef VENDOR_EDIT -->
 <!-- wangdongdong@MultiMediaService,2016/10/01,add i2s path-->
@@ -2590,6 +2674,11 @@
    <path name="speaker-ext-1">
    </path>
 
+    <!-- yewenliang@MM.Audio, 2019/11/21, add for close pa -->
+    <path name="speaker-dummy">
+        <ctl name="Tfa Enable" value="0" />
+   </path>
+
 <!-- suzhiguang,for speaker MMI test -->
 <!--#ifdef VENDOR_EDIT
 //dujie@MM.Audio, 2019/05/21, add receiver-mmi mixer path -->
@@ -2801,6 +2890,20 @@
         <path name="amic4" />
 <!-- #endif VENDOR_EDIT-->
     </path>
+
+<!-- #ifdef VENDOR_EDIT -->
+<!-- zhangrun@MM.Audio,2020/04/21, add for Hearing Aid feature-->
+    <path name="hearing-aid-mic">
+        <path name="amic4" />
+    </path>
+<!--#endif-->
+
+<!-- ifdef VENDOR_EDIT -->
+<!-- liuhaituo@MM.Audio, 2019/12/31, Add for Sva record training wav -->
+    <path name="sva-re-mic">
+        <path name="amic1" />
+    </path>
+<!-- endif -->
 
 <!--#ifdef VENDOR_EDIT  -->
     <path name="handset-mic-karaoke">
@@ -3018,6 +3121,18 @@
         <ctl name="DEC0 Volume" value="84" />
     </path>
 
+<!-- #ifdef VENDOR_EDIT -->
+<!-- dujie@MM.Audio, 2019/09/20, add for ktv loopback -->
+    <path name="headset-mic-ktv">
+        <path name="amic2" />
+        <ctl name="ADC2 Volume" value="8" />
+        <ctl name="DEC1 Volume" value="82" />
+    </path>
+
+    <path name="usb-headset-mic-ktv">
+    </path>
+<!-- #endif -->
+
     <path name="headset-mic-liquid">
         <path name="amic2" />
     </path>
@@ -3218,6 +3333,10 @@
 
     <path name="voice-rec-mic">
         <path name="handset-mic" />
+<!-- ifdef VENDOR_EDIT -->
+        <ctl name="ADC4 Volume" value="6" />
+        <ctl name="DEC0 Volume" value="74" />
+<!-- endif -->
     </path>
 
     <path name="camcorder-mic">
@@ -3604,6 +3723,14 @@
         <path name="speaker-dmic-endfire-qrd" />
     </path>
 
+<!--#ifdef VENDOR_EDIT  -->
+<!-- liuhaituo@MM.Audio, 2020/06/22, support voice assitant used 4ch aec record -->
+    <path name="speaker-stereo-dmic-fdx-aec">
+        <path name="handset-dmic-endfire" />
+        <ctl name="DEC7 Volume" value="100" />
+        <ctl name="DEC8 Volume" value="100" />
+    </path>
+
     <path name="voice-dmic-ef-qrd">
         <path name="dmic-endfire-qrd" />
     </path>
@@ -3852,7 +3979,7 @@
         <path name="unprocessed-handset-mic" />
 <!-- ifdef VENDOR_EDIT -->
         <ctl name="ADC4 Volume" value="6" />
-        <ctl name="DEC0 Volume" value="62" />
+        <ctl name="DEC0 Volume" value="78" />
 <!-- endif -->
     </path>
 
