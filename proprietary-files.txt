@@ -111,7 +111,13 @@ vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
+vendor/lib64/libarcsoft_dualcam_bokeh_api.so
+vendor/lib64/libarcsoft_dualcam_refocus_left.so
+vendor/lib64/libarcsoft_dualcam_refocus_preview.so
+vendor/lib64/libarcsoft_dualcam_refocus_right.so
+vendor/lib64/libarcsoft_portrait_distortion_correction.so
 vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
 
 # Fingerprint
 vendor/lib/hw/goodix.fod.msmnile.so
