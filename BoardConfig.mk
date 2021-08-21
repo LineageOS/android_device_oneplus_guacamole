@@ -8,6 +8,7 @@
 BOARD_VENDOR := oneplus
 DEVICE_PATH := device/oneplus/guacamole
 
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Display
