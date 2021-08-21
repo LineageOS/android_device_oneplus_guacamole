@@ -1,0 +1,7 @@
+# default value for ALS calibration
+# device-specific overrides should be placed in /mnt/vendor/persist/als_correction.lineage/{red_max_lux, green_max_lux, blue_max_lux, white_max_lux, als_bias}
+ro.vendor.sensors.als_correction_defaults.red_max_lux=140
+ro.vendor.sensors.als_correction_defaults.green_max_lux=180
+ro.vendor.sensors.als_correction_defaults.blue_max_lux=80
+ro.vendor.sensors.als_correction_defaults.white_max_lux=400
+ro.vendor.sensors.als_correction_defaults.als_bias=0
