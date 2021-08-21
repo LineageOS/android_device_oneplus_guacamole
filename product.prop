@@ -1,0 +1,12 @@
+# Padding for Gboard from OOS 10
+ro.com.google.ime.kb_pad_port_l=7
+ro.com.google.ime.kb_pad_port_r=7
+ro.com.google.ime.kb_pad_land_l=14
+ro.com.google.ime.kb_pad_land_r=14
+
+# Padding for Baidu Keyboard from OOS 10
+ro.com.baidu.input.pad_port_l=14
+ro.com.baidu.input.pad_port_r=14
+ro.com.baidu.input.pad_land_l=19
+ro.com.baidu.input.pad_land_r=19
+ro.com.baidu.input.pad_land_b=10
