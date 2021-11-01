@@ -227,4 +227,11 @@
     <!-- Fast brightness animation ramp rate in brightness units per second-->
     <integer translatable="false" name="config_brightness_ramp_rate_fast">400</integer>
 
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false" >
+        <item>720</item>  <!-- <item>sensorLocationX</item> -->
+        <item>2728</item> <!-- <item>sensorLocationY</item> -->
+        <item>110</item>  <!-- <item>sensorRadius</item> -->
+    </integer-array>
+
 </resources>
