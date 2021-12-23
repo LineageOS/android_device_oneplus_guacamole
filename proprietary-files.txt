@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlus7ProOxygen_21.P.40_OTA_0400_all_2110211514_b3b4290
+# All unpinned blobs below are extracted from OnePlus7ProOxygen_21.P.41_OTA_0410_all_2112101753_1517d4e8f
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
