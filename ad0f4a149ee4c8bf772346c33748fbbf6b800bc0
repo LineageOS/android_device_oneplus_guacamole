@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d3ef4bf_0ce8dbd2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30385
+      },
+      "writtenOn": "2022-01-27T17:36:49Z",
+      "side": 1,
+      "message": "Isn\u0027t the extra space meant for the new privacy indicators introduced in Android 12?",
+      "revId": "ad0f4a149ee4c8bf772346c33748fbbf6b800bc0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
