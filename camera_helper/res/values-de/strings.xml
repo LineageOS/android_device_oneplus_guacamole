@@ -20,8 +20,8 @@
     <string name="retry">Wiederholen</string>
     <string name="warning">Warnung</string>
     <string name="free_fall_detected_title">Freier Fall entdeckt</string>
-    <string name="free_fall_detected_message">Frontkamera wurde eingefahren, um sie zu schützen. Möchten Sie die Frontkamera erneut verwenden?</string>
-    <string name="motor_cannot_go_down_message">Die Frontkamera kann nicht eingefahren werden, bitte stellen Sie sicher, dass keine Hindernisse vorhanden sind</string>
-    <string name="motor_cannot_go_up_message">Die Frontkamera kann nicht ausfahren, bitte stellen Sie sicher, dass keine Hindernisse vorhanden sind</string>
-    <string name="motor_press_message">Das Herunterdrücken der Frontkamera kann den Motor beschädigen. Bitte vermeiden Sie dies.</string>
+    <string name="free_fall_detected_message">Frontkamera wurde eingefahren, um sie zu schützen. Möchtest du die Frontkamera erneut verwenden?</string>
+    <string name="motor_cannot_go_down_message">Die Frontkamera kann nicht eingefahren werden, bitte stelle sicher, dass kein Hindernis vorhanden ist</string>
+    <string name="motor_cannot_go_up_message">Die Frontkamera kann nicht ausfahren, bitte stelle sicher, dass kein Hindernis vorhanden ist</string>
+    <string name="motor_press_message">Das Herunterdrücken der Frontkamera kann den Motor beschädigen. Bitte vermeide dies.</string>
 </resources>
