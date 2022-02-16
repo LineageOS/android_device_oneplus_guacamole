@@ -12,6 +12,9 @@ DEVICE_PATH := device/oneplus/guacamole
 # Display
 TARGET_SCREEN_DENSITY := 560
 
+# Kernel
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
+
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
