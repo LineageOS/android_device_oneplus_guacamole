@@ -11,9 +11,6 @@ DEVICE_PATH := device/oneplus/guacamole
 # Display
 TARGET_SCREEN_DENSITY := 560
 
-# Kernel
-TARGET_KERNEL_CONFIG := vendor/sm8150-perf_defconfig
-
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
