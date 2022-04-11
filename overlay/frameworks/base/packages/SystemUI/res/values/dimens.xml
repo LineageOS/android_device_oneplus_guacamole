@@ -19,7 +19,7 @@
     <!-- Height of the status bar header bar when on Keyguard -->
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
 
-    <!-- the padding on the end of the statusbar -->
+    <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">63px</dimen>
 
     <!-- the padding on the end of the statusbar -->
