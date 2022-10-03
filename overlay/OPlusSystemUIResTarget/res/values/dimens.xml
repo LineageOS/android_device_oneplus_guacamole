@@ -14,6 +14,9 @@
     <!-- the padding on the end of the statusbar -->
     <dimen name="status_bar_padding_end">33px</dimen>
 
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">18px</dimen>
+
     <!-- Margin on the right side of the system icon group on Keyguard. -->
     <dimen name="system_icons_keyguard_padding_end">@dimen/status_bar_padding_end</dimen>
 
