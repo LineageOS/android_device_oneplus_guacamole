@@ -16,6 +16,24 @@
       "message": "Any reason for us to change model to the India specific one instead of the global one, just because the blobs happen to be from there?",
       "revId": "ddb7bf423fddfa8aef98032403c5feb4ea7d99e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05748bde_5fcd54e2",
+        "filename": "lineage_guacamole.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-11T13:42:41Z",
+      "side": 1,
+      "message": "I\u0027ll change it to global when global blobs are available.",
+      "parentUuid": "5d8943b2_3babe816",
+      "revId": "ddb7bf423fddfa8aef98032403c5feb4ea7d99e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
