@@ -67,6 +67,7 @@ odm/vendor/firmware/gfp9608.b07
 odm/vendor/firmware/gfp9608.mdt
 
 # Sensors
+odm/etc/sensor/sensor_config.json
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/ak991x_polling_0.json
 vendor/etc/sensors/config/alsps.json
