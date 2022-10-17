@@ -66,6 +66,19 @@ odm/vendor/firmware/gfp9608.b06
 odm/vendor/firmware/gfp9608.b07
 odm/vendor/firmware/gfp9608.mdt
 
+# Graphics (Adreno firmware)
+vendor/firmware/a640_zap.b01
+vendor/firmware/a640_zap.elf
+vendor/firmware/a640_zap.mdt
+
+# IPA firmware
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
+vendor/firmware/ipa_uc.b01
+vendor/firmware/ipa_uc.elf
+vendor/firmware/ipa_uc.mdt
+
 # Sensors
 odm/etc/sensor/sensor_config.json
 vendor/etc/sensors/config/ak991x_dri_0.json
