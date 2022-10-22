@@ -530,3 +530,15 @@ vendor/firmware/ringtone_Harping_RTP.bin
 vendor/firmware/shuntai24k_rtp.bin
 vendor/firmware/t-jingle_RTP.bin
 vendor/firmware/wentai24k_rtp.bin
+
+# WiFi
+odm/etc/wifi/bdwlan.b0a
+odm/etc/wifi/bdwlan.b0i
+odm/etc/wifi/bdwlan.b1a
+odm/etc/wifi/bdwlan0.b0a
+odm/etc/wifi/bdwlan0.b0i
+odm/etc/wifi/bdwlan0.b1a
+odm/etc/wifi/bdwlan1.b0a
+odm/etc/wifi/bdwlan1.b0i
+odm/etc/wifi/bdwlan1.b1a
+odm/etc/wifi/init.project.wifi.sh
