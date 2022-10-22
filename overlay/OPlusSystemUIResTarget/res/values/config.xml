@@ -9,6 +9,6 @@
     <bool name="config_roundedCornerMultipleRadius">true</bool>
 
     <!-- The radius of the enrollment progress bar, in dp -->
-    <integer name="config_udfpsEnrollProgressBar" translatable="false">115</integer>
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">142</integer>
 
 </resources>
