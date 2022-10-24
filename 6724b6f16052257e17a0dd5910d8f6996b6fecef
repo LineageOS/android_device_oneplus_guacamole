@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2c39d13_f9c6c14b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-24T08:20:48Z",
+      "side": 1,
+      "message": "Does that do anything useful on device without power button fingerprint sensor?",
+      "revId": "6724b6f16052257e17a0dd5910d8f6996b6fecef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
