@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d27ed07_0134817f",
+        "filename": "overlay/OPlusSystemUIResTarget/res/values/dimens.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 30385
+      },
+      "writtenOn": "2022-10-24T07:57:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "38c95068_5392f8f9",
+      "revId": "98bc0e3bf825d09ea54a904502ead844831d7acb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05c4744d_d0e8030d",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-10-24T07:42:51Z",
       "side": 1,
       "message": "This is not in dimens.xml",
+      "revId": "98bc0e3bf825d09ea54a904502ead844831d7acb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9135776_52f5b510",
+        "filename": "overlay/OPlusSystemUIResTarget/res/values/dimens.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 30385
+      },
+      "writtenOn": "2022-10-24T07:57:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "05c4744d_d0e8030d",
       "revId": "98bc0e3bf825d09ea54a904502ead844831d7acb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
