@@ -16,6 +16,24 @@
       "message": "Does that do anything useful on device without power button fingerprint sensor?",
       "revId": "6724b6f16052257e17a0dd5910d8f6996b6fecef",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57b7264a_07214b2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30385
+      },
+      "writtenOn": "2022-10-24T08:37:05Z",
+      "side": 1,
+      "message": "Aligns AOD -\u003e LS anim to power button",
+      "parentUuid": "b2c39d13_f9c6c14b",
+      "revId": "6724b6f16052257e17a0dd5910d8f6996b6fecef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
