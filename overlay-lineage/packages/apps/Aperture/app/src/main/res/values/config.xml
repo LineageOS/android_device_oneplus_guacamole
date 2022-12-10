@@ -31,7 +31,6 @@
              </string-array>
     -->
     <string-array name="config_additionalVideoConfigurations">
-        <!-- No additional configuration is added by default. -->
         <item>0</item> <item>sd|hd|fhd|uhd</item> <item>60</item>
         <item>2</item> <item>sd|hd|fhd</item>     <item>60</item>
     </string-array>
