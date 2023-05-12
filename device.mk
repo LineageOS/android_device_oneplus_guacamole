@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
     OPlusSystemUIResTarget
 
 # Shipping API
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
