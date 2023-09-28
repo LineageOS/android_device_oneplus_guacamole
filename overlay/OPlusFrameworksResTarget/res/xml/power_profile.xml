@@ -207,7 +207,7 @@
   <!-- Current at each CPU speed for cluster 2, as per 'cpu.speeds.cluster2'.
        Like cpu.speeds.cluster2, there must be one of these present for
        each heterogeneous CPU cluster. -->
-  <array name="cpu.core_power.cluster1">
+  <array name="cpu.core_power.cluster2">
       <value>82</value>  <!-- ~60mA -->
       <value>89</value>  <!-- ~80mA -->
       <value>93</value>  <!-- ~80mA -->
