@@ -155,6 +155,7 @@
       <value>2649600   </value>  <!-- 2649.6  MHz CPU speed -->
       <value>2745600   </value>  <!-- 2745.6  MHz CPU speed -->
       <value>2841600 </value>  <!-- 2841.6  MHz CPU speed -->
+      <value>2956800</value>  <!-- 2956.8  MHz CPU speed -->
   </array>
 
   <!-- Current at each CPU speed for cluster 0, as per 'cpu.speeds.cluster0'.
@@ -228,6 +229,7 @@
       <value>344</value>  <!-- ~190mA -->
       <value>371</value>  <!-- ~190mA -->
       <value>446</value>  <!-- ~200mA -->
+      <value>466</value>  <!-- ~200mA -->
   </array>
 
   <!-- Current when CPU is awake -->
