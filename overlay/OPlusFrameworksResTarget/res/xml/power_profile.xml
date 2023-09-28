@@ -28,7 +28,6 @@
     IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 -->
 
-
 <device name="Android">
   <!-- Most values are the incremental current used by a feature,
        in mA (measured at nominal voltage).
@@ -64,7 +63,6 @@
       <value>1</value> <!-- ~1mA -->
   </array>
 
-
   <!-- Radio related values. For modems WITH energy reporting support in firmware, use
        modem.controller.idle, modem.controller.tx, modem.controller.rx, modem.controller.voltage.
        -->
@@ -94,67 +92,66 @@
        cpu.speeds.cluster0, cpu.speeds.cluster1, etc... -->
   <array name="cpu.core_speeds.cluster0">
       <value>300000</value>   <!-- 300  MHz CPU speed -->
-      <value>403200 </value>   <!-- 403.2  MHz CPU speed -->
-      <value>499200 </value>  <!-- 499.2 MHz CPU speed -->
-      <value>576000 </value>  <!-- 576 MHz CPU speed -->
-      <value>672000 </value>  <!-- 672 MHz CPU speed -->
-      <value>768000 </value>  <!-- 768 MHz CPU speed -->
-      <value>844800 </value>  <!-- 844.8 MHz CPU speed -->
-      <value>940800 </value>  <!-- 940.8 MHz CPU speed -->
-      <value>1036800 </value>  <!-- 1036.8 MHz CPU speed -->
-      <value>1113600  </value>  <!-- 1113.6 MHz CPU speed -->
-      <value>1209600   </value>  <!-- 1209.6 MHz CPU speed -->
-      <value>1305600  </value>  <!-- 1305.6 MHz CPU speed -->
-      <value>1382400  </value>  <!-- 1382.4 MHz CPU speed -->
-      <value>1478400  </value>  <!-- 1478.4 MHz CPU speed -->
-      <value>1555200  </value>  <!-- 1555.2 MHz CPU speed -->
-      <value>1632000  </value>  <!-- 1632 MHz CPU speed -->
-      <value>1708800  </value>  <!-- 1708.8 MHz CPU speed -->
-      <value>1785600 </value>  <!-- 1785.6 MHz CPU speed -->
+      <value>403200</value>   <!-- 403.2  MHz CPU speed -->
+      <value>499200</value>  <!-- 499.2 MHz CPU speed -->
+      <value>576000</value>  <!-- 576 MHz CPU speed -->
+      <value>672000</value>  <!-- 672 MHz CPU speed -->
+      <value>768000</value>  <!-- 768 MHz CPU speed -->
+      <value>844800</value>  <!-- 844.8 MHz CPU speed -->
+      <value>940800</value>  <!-- 940.8 MHz CPU speed -->
+      <value>1036800</value>  <!-- 1036.8 MHz CPU speed -->
+      <value>1113600</value>  <!-- 1113.6 MHz CPU speed -->
+      <value>1209600</value>  <!-- 1209.6 MHz CPU speed -->
+      <value>1305600</value>  <!-- 1305.6 MHz CPU speed -->
+      <value>1382400</value>  <!-- 1382.4 MHz CPU speed -->
+      <value>1478400</value>  <!-- 1478.4 MHz CPU speed -->
+      <value>1555200</value>  <!-- 1555.2 MHz CPU speed -->
+      <value>1632000</value>  <!-- 1632 MHz CPU speed -->
+      <value>1708800</value>  <!-- 1708.8 MHz CPU speed -->
+      <value>1785600</value>  <!-- 1785.6 MHz CPU speed -->
   </array>
 
-
   <array name="cpu.core_speeds.cluster1">
-      <value>710400 </value>  <!-- 710.4  MHz CPU speed -->
-      <value>825600 </value>  <!-- 825.6  MHz CPU speed -->
-      <value>940800 </value>  <!-- 940.8  MHz CPU speed -->
-      <value>1056000 </value>  <!-- 1056  MHz CPU speed -->
-      <value>1171200 </value>  <!-- 1171.2  MHz CPU speed -->
-      <value>1286400 </value>  <!-- 1286.4  MHz CPU speed -->
-      <value>1401600 </value>  <!-- 1401.6  MHz CPU speed -->
-      <value>1497600 </value>  <!-- 1497.6  MHz CPU speed -->
-      <value>1612800 </value>  <!-- 1612.8  MHz CPU speed -->
-      <value>1708800 </value>  <!-- 1708.8  MHz CPU speed -->
-      <value>1804800 </value>  <!-- 1804.8  MHz CPU speed -->
-      <value>1920000 </value>  <!-- 1920  MHz CPU speed -->
-      <value>2016000 </value>  <!-- 2016  MHz CPU speed -->
-      <value>2131200  </value>  <!-- 2131.2  MHz CPU speed -->
-      <value>2227200  </value>  <!-- 2227.2  MHz CPU speed -->
-      <value>2323200  </value>  <!-- 2323.2  MHz CPU speed -->
-      <value>2419200 </value>  <!-- 2419.2  MHz CPU speed -->
+      <value>710400</value>  <!-- 710.4  MHz CPU speed -->
+      <value>825600</value>  <!-- 825.6  MHz CPU speed -->
+      <value>940800</value>  <!-- 940.8  MHz CPU speed -->
+      <value>1056000</value>  <!-- 1056  MHz CPU speed -->
+      <value>1171200</value>  <!-- 1171.2  MHz CPU speed -->
+      <value>1286400</value>  <!-- 1286.4  MHz CPU speed -->
+      <value>1401600</value>  <!-- 1401.6  MHz CPU speed -->
+      <value>1497600</value>  <!-- 1497.6  MHz CPU speed -->
+      <value>1612800</value>  <!-- 1612.8  MHz CPU speed -->
+      <value>1708800</value>  <!-- 1708.8  MHz CPU speed -->
+      <value>1804800</value>  <!-- 1804.8  MHz CPU speed -->
+      <value>1920000</value>  <!-- 1920  MHz CPU speed -->
+      <value>2016000</value>  <!-- 2016  MHz CPU speed -->
+      <value>2131200</value>  <!-- 2131.2  MHz CPU speed -->
+      <value>2227200</value>  <!-- 2227.2  MHz CPU speed -->
+      <value>2323200</value>  <!-- 2323.2  MHz CPU speed -->
+      <value>2419200</value>  <!-- 2419.2  MHz CPU speed -->
   </array>
 
   <array name="cpu.core_speeds.cluster2">
-      <value>825600 </value>  <!-- 825.6  MHz CPU speed -->
-      <value>940800 </value>  <!-- 940.8  MHz CPU speed -->
-      <value>1056000 </value>  <!-- 1056  MHz CPU speed -->
-      <value>1171200 </value>  <!-- 1171.2  MHz CPU speed -->
-      <value>1286400 </value>  <!-- 1286.4  MHz CPU speed -->
-      <value>1401600 </value>  <!-- 1401.6  MHz CPU speed -->
-      <value>1497600 </value>  <!-- 1497.6  MHz CPU speed -->
-      <value>1612800 </value>  <!-- 1612.8  MHz CPU speed -->
-      <value>1708800 </value>  <!-- 1708.8  MHz CPU speed -->
-      <value>1804800 </value>  <!-- 1804.8  MHz CPU speed -->
-      <value>1920000 </value>  <!-- 1920  MHz CPU speed -->
-      <value>2016000 </value>  <!-- 2016  MHz CPU speed -->
-      <value>2131200  </value>  <!-- 2131.2  MHz CPU speed -->
-      <value>2227200  </value>  <!-- 2227.2  MHz CPU speed -->
-      <value>2323200  </value>  <!-- 2323.2  MHz CPU speed -->
-      <value>2419200 </value>  <!-- 2419.2  MHz CPU speed -->
-      <value>2534400   </value>  <!-- 2534.4  MHz CPU speed -->
-      <value>2649600   </value>  <!-- 2649.6  MHz CPU speed -->
-      <value>2745600   </value>  <!-- 2745.6  MHz CPU speed -->
-      <value>2841600 </value>  <!-- 2841.6  MHz CPU speed -->
+      <value>825600</value>  <!-- 825.6  MHz CPU speed -->
+      <value>940800</value>  <!-- 940.8  MHz CPU speed -->
+      <value>1056000</value>  <!-- 1056  MHz CPU speed -->
+      <value>1171200</value>  <!-- 1171.2  MHz CPU speed -->
+      <value>1286400</value>  <!-- 1286.4  MHz CPU speed -->
+      <value>1401600</value>  <!-- 1401.6  MHz CPU speed -->
+      <value>1497600</value>  <!-- 1497.6  MHz CPU speed -->
+      <value>1612800</value>  <!-- 1612.8  MHz CPU speed -->
+      <value>1708800</value>  <!-- 1708.8  MHz CPU speed -->
+      <value>1804800</value>  <!-- 1804.8  MHz CPU speed -->
+      <value>1920000</value>  <!-- 1920  MHz CPU speed -->
+      <value>2016000</value>  <!-- 2016  MHz CPU speed -->
+      <value>2131200</value>  <!-- 2131.2  MHz CPU speed -->
+      <value>2227200</value>  <!-- 2227.2  MHz CPU speed -->
+      <value>2323200</value>  <!-- 2323.2  MHz CPU speed -->
+      <value>2419200</value>  <!-- 2419.2  MHz CPU speed -->
+      <value>2534400</value>  <!-- 2534.4  MHz CPU speed -->
+      <value>2649600</value>  <!-- 2649.6  MHz CPU speed -->
+      <value>2745600</value>  <!-- 2745.6  MHz CPU speed -->
+      <value>2841600</value>  <!-- 2841.6  MHz CPU speed -->
       <value>2956800</value>  <!-- 2956.8  MHz CPU speed -->
   </array>
 
@@ -255,7 +252,7 @@
   <item name="wifi.controller.tx">205</item>
   <!-- Current at each of the wifi Tx levels in mA. The number of tx levels varies per device
        and is available only of wifi chipsets which support the tx level reporting. Use
-        wifi.tx for other chipsets. none by default -->
+       wifi.tx for other chipsets. none by default -->
   <array name="wifi.controller.tx_levels"> <!-- mA -->
   </array>
   <!-- Operating volatage for wifi radio in mV. 0 by default-->
@@ -266,7 +263,7 @@
     <value>.002</value>  <!-- 9-64/hr -->
     <value>.02</value>   <!-- 65-512/hr -->
     <value>.2</value>    <!-- 513-4,096/hr -->
-    <value>2</value>    <!-- 4097-/hr -->
+    <value>2</value>     <!-- 4097-/hr -->
   </array>
 
 </device>
