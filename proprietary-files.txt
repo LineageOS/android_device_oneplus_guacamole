@@ -13,7 +13,6 @@ odm/etc/acdbdata/Speaker_cal.acdb
 
 # Audio
 vendor/lib/hw/audio.primary.msmnile.so
-vendor/lib64/hw/audio.primary.msmnile.so
 
 # Camera
 odm/etc/camera/vidhance_calibration
